@@ -1,0 +1,20 @@
+---
+layout: page
+title: Photo of the month
+menu-title: Photo of the month
+menu: main
+---
+
+<p>Previous 'Photo of the month' entries:</p>
+
+<div class="gallery-content">
+{% for post in site.categories.photo %}
+  <div class="post">
+	<span class="post-meta">{{ post.date | date: "%B %Y" }}</span>
+
+	<div class="post-content">
+	  {{ post.content }}
+	</div>
+  </div>
+{% endfor %}
+</div>

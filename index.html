@@ -1,27 +1,69 @@
-<html>
+---
+layout: default
+---
+<div style="text-align: center">
+	<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+	  <tr>
+		<td align="center" valign="middle">
+		<p align="center"><strong><em>Postal Address:<br>
+		</em></strong><em><strong>&nbsp;PO Box 569<br> &nbsp;Neerim South 3831<br>
+		</strong></em><strong><em>Email:<br>&nbsp;<img border="0" src="images/Email.gif" width="204" height="24"></em></strong>
+		</td>
+		<td align="center">
+		  <p align="center"><img border="0" src="images/Vnscolor.GIF" align="middle" width="340" height="170"></p>
+		</td>
+		<td>
+		  <p align="center"><em><strong><big>Vic. INCORPORATED&nbsp;<br>
+	 No. A0034590Y</big></strong></em>
+		</td>
+	  </tr>
+	</table>
 
-<head>
-<title>Victorian N Scale Collective</title>
-<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<h2>Our aims are:</h2>
 
-  ga('create', 'UA-47432307-1', 'vnsc.org.au');
-  ga('send', 'pageview');
+    <p><b><i>1. To promote and encourage the participation in and enjoyment of railway
+    modelling in N Scale.</i></b></p>
 
-</script>
-</head>
+    <p><b><i>2. To promote social fellowship and exchange of information for and on
+    behalf of its Members through appropriate means.</i></b></p>
 
-<frameset framespacing="0" border="false" cols="182,*" frameborder="0">
-  <frame name="contents" target="main" src="sidebar.htm" scrolling="no" noresize>
-  <frame name="main" src="main.htm">
-  <noframes>
-<body link="#FFFF00">
-  <p>This page uses frames, but your browser doesn't support them.</p>
-  </body>
-  </noframes>
-</frameset>
-</html>
+    <p><b><i>3. To participate in model railway exhibitions and or similar public
+    displays, as the Collective sees fit.</i></b></p>
+	
+	<p><a href="/membership.htm">Read more about membership</a>.</p>
+
+	
+	<h2>News</h2>
+	
+	<p><b>Recent activity:</b></p>
+
+    <div class="post-list">
+		{% for post in site.categories.news offset: 0 limit: 3 %}
+		  <div class="post">
+			<span class="frontpage-post-meta">{{ post.date | date: "%B %Y" }}</span>
+
+			<div class="frontpage-post-content">
+			  {{ post.content }}
+			</div>
+		  </div>
+		{% endfor %}
+    </div>
+	
+    <p>We meet monthly, with regular layout running days and model railway exhibition appearances.</p>
+	
+	<p>See our <a href="/news.htm">News page</a> for more details</p>
+  
+    <p><font face="Arial" color="#FF0000">VNSC Yahoo forum</font>&nbsp;also available to Members only - hundreds of posts a month, and growing!</p>
+  
+    <h2>Photo of the month</h2>
+	  
+	{% for post in site.categories.photo offset: 0 limit: 1 %}
+		<p><b>{{ post.date | date: "%B %Y" }}</b></p>
+		
+		<div class="photo-of-the-month">
+		  {{ post.content }}
+		</div>
+		
+		<p><a href="/photo-of-the-month.htm">'Photo of the month' archives</a></p>
+	{% endfor %}
+</div>
