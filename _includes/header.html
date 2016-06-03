@@ -6,15 +6,13 @@
 
     <nav class="site-nav">
       <div class="trigger">
-		<a class="site-title" href="/news.htm">News</a>
-        {% for my_page in site.pages %}
-          {% if my_page.menu-title %}
+		{% assign sorted_pages = site.pages | sort:"weight"  %}
+        {% for my_page in sorted_pages %}
 		    {% if my_page.menu == 'main' %}
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a>
-            {% endif %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
+          {% if my_page.menu-title %}{{ my_page.menu-title}}{% else %}{{ my_page.title}}{% endif %}</a>
 		  {% endif %}
         {% endfor %}
-		<a class="site-title" href="/links.htm">Links</a>
       </div>
     </nav>
 
