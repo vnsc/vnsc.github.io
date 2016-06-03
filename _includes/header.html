@@ -9,8 +9,7 @@
 		{% assign sorted_pages = site.pages | sort:"weight"  %}
         {% for my_page in sorted_pages %}
 		    {% if my_page.menu == 'main' %}
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
-          {% if my_page.menu-title %}{{ my_page.menu-title}}{% else %}{{ my_page.title}}{% endif %}</a>
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{% if my_page.menu-title %}{{ my_page.menu-title}}{% else %}{{ my_page.title}}{% endif %}</a>
 		  {% endif %}
         {% endfor %}
       </div>
