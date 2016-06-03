@@ -7,9 +7,12 @@ weight: 60
 ---
 
 <ul>
-	<li><a href="/showcase/vnsc-modular-layout.htm">VNSC AusTrak modules</a></li>
-	<li><a href="/showcase/member-models-1.htm">Member models - Page 1</a></li>
-	<li><a href="/showcase/member-models-2.htm">Member models - Page 2</a></li>
+{% assign sorted_pages = site.pages | sort:"weight"  %}
+  {% for my_page in sorted_pages %}
+	{% if my_page.menu == 'showcase' %}
+	<li><a href="{{ my_page.url | prepend: site.baseurl }}">{% if my_page.menu-title %}{{ my_page.menu-title}}{% else %}{{ my_page.title}}{% endif %}</a></li>
+  {% endif %}
+{% endfor %}
 </ul>
 
 <div class="gallery">
