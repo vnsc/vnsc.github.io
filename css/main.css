@@ -101,6 +101,7 @@ h2 {
 }
 
 .gallery-content img {
+	max-width: 1000px;
 	display: block;
 	margin: 15px auto;
 }
@@ -114,3 +115,20 @@ h2 {
 .photo-of-the-month {
 	font-style: italic;
 }
+
+.photo-of-the-month img {
+	max-width: 650px;
+}
+
+@media screen and (max-width: 650px) {
+	.photo-of-the-month img {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.gallery-content img {
+		width: 100%;
+	}
+}
+	
