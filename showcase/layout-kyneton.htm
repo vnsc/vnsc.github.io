@@ -1,0 +1,16 @@
+---
+layout: gallery
+title: Member layouts - Ky-N-Ton
+menu: showcase
+weight: 15
+---
+
+<div class="gallery-content">
+{% for post in site.categories.kyneton %}
+  <div class="post">
+	<div class="post-content">
+	  {{ post.content }}
+	</div>
+  </div>
+{% endfor %}
+</div>
