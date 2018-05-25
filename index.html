@@ -57,7 +57,7 @@ layout: default
   
     <h2>Photo of the month</h2>
 	  
-	{% for post in site.categories.photo offset: 0 limit: 1 %}
+	{% for post in site.categories.photoOfTheMonth offset: 0 limit: 1 %}
 		<p><b>{{ post.date | date: "%B %Y" }}</b></p>
 		
 		<div class="photo-of-the-month">
