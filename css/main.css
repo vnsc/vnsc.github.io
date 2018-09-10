@@ -18,6 +18,10 @@ h2 {
 	position:relative;
 }
 
+.site-nav .menu-icon {
+	display: none;
+}
+
 .site-header {
 	width: 200px;
     float: left;
@@ -25,7 +29,7 @@ h2 {
     height: 100%;
 }
 
-.site-header a {
+.site-header .trigger a {
 	color: #FFFF00;
 	font-weight: bold;
 	display: block;
@@ -66,11 +70,11 @@ h2 {
 }
 
 .rss-subscribe {
-	padding-top: 30px;	
+	padding-top: 30px;
 }
 
 .frontpage-post-content {
-	padding: 10px 0 15px;	
+	padding: 10px 0 15px;
 }
 
 .frontpage-post-content  li {
@@ -121,3 +125,57 @@ h2 {
 	width: 100%;
 	max-width: 650px;
 }
+
+@media screen and (max-width: 800px) {
+	.wrapper {
+		padding: 0;
+	}
+	.panel {
+		width: 100%;
+	}
+	.site-nav {
+        position:absolute;
+        top: 9px;
+        right: 15px;
+        border-radius: 5px;
+        text-align: left
+    }
+
+    .site-nav .menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+		background-color: #000080;
+    }
+
+    .site-nav .menu-icon>svg {
+        width: 18px;
+        height: 15px;
+    }
+
+    .site-nav .menu-icon>svg path {
+		fill: #FFFF00;
+    }
+
+    .site-nav .trigger {
+        clear: both;
+        display: none;
+		background-color: #000080;
+    }
+
+    .site-nav:hover .trigger {
+        display: block;
+        padding-bottom: 5px
+    }
+
+    .site-nav .page-link {
+        display: block;
+        padding: 5px 10px;
+        margin: 0 20px;
+    }
+}
+
