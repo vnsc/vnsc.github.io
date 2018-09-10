@@ -104,6 +104,11 @@ h2 {
 	margin-top: 45px;
 }
 
+.logo {
+	max-width: 340px;
+    width: 100%;
+}
+
 .gallery-content img {
 	width: 100%;
 	max-width: 1000px;
